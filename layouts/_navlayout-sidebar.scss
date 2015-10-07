@@ -4,8 +4,9 @@
    Specific sidebar styling
 ========================================================================== */
 .region-sidebar {
-	background-color: $color-navsidebar-bg;
+	background-color: $color-sidebar-bg;
 	> .mx-layoutcontainer-wrapper {
 		padding: 0;
 	}
 }
+

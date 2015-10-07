@@ -1,0 +1,134 @@
+/* ==========================================================================
+	Mendix Navigation bar
+========================================================================== */
+.mx-navbar {
+	border-radius: 0;
+	margin: 0;
+	border-style: none;
+	background-color: $color-nav-topbar-bg;
+
+	ul.nav { 
+		margin: 0; // weird -margin if screen gets small (bootstrap)
+		
+		/* Navigation item */
+		> li.mx-navbar-item > a {
+			@include font(normal);
+			border-radius: 0;
+			padding: 15px 20px;
+			color: $color-nav-topbar-text;
+			font-size: $font-nav-topbar-size;
+			vertical-align: middle;
+
+			/* Dropdown arrow */
+			.caret {
+				border-top-color: $color-nav-topbar-text;
+				border-bottom-color: $color-nav-topbar-text;
+			}
+
+			&:hover,
+			&:focus,
+			&.active {
+				background-color: $color-nav-topbar-bg-hover;
+				color: $color-nav-topbar-text-hover;
+				text-decoration: none;
+
+				.caret {
+					border-top-color: $color-nav-topbar-text-active;
+					border-bottom-color: $color-nav-topbar-text-active;
+				}
+			}
+			&.active {
+            	color: $color-nav-topbar-text-active;
+            	background-color: $color-nav-topbar-bg-active;
+            }
+
+			/* Dropdown */
+			.mx-navbar-submenu:before {
+				position: absolute;
+				top: -9px;
+				left: 15px;
+				width: 0;
+				height: 0;
+				border-width: 0 9px 9px 9px;
+				border-style: solid;
+				border-color: transparent transparent $color-nav-topbar-border transparent;
+				content: "";
+				transform: rotate(360deg);
+				-webkit-transform: rotate(360deg);
+			}
+
+			// Image
+			img {
+				width: 20px; // Default size (so it looks good)
+				height: auto;
+			}
+
+			.glyphicon {
+					vertical-align: middle;
+					font-size: $font-nav-topbar-glyph-size;
+					top: -1px;
+				}
+		}
+
+		/* When hovering or the dropdown is open */
+		> .mx-navbar-item > a:hover, 
+		> .mx-navbar-item > a:focus,
+		> .mx-navbar-item.active a,
+		> .mx-navbar-item.open > a, 
+		> .mx-navbar-item.open > a:hover, 
+		> .mx-navbar-item.open > a:focus {
+			background-color: $color-nav-topbar-bg-hover;
+			color: $color-nav-topbar-text-hover;
+			text-decoration: none;
+
+			.caret {
+				border-top-color: $color-nav-topbar-text-hover;
+				border-bottom-color: $color-nav-topbar-text-hover;
+			}
+		}
+		> .mx-navbar-item.open .dropdown-menu > li.mx-navbar-subitem.active a {
+			background-color: $color-nav-topbar-sub-bg-active;
+			color: $color-nav-topbar-sub-text-active;
+
+			.caret {
+				border-top-color: $color-nav-topbar-sub-text-active;
+				border-bottom-color: $color-nav-topbar-sub-text-active;
+			}
+        }
+	}
+
+	@media (max-width: $screen-sm) {
+		ul.nav > li.mx-navbar-item > a {
+			padding: 10px 20px;
+		}
+		.mx-navbar-item.open .dropdown-menu {
+			background-color: $color-nav-topbar-sub-bg;
+			border-radius: 0;
+			padding: 0;
+			
+			> li.mx-navbar-subitem > a {
+				@include font(normal);
+				padding: 10px 20px;
+				border-radius: 0;
+				color: $color-nav-topbar-sub-text;
+				font-size: $font-nav-topbar-sub-size;
+
+				&:hover,
+				&:focus {
+					color: $color-nav-topbar-sub-text-hover;
+					background-color: $color-nav-topbar-sub-bg-hover;
+				}
+
+				&.active {
+					color: $color-nav-topbar-sub-text-active;
+					background-color: $color-nav-topbar-sub-bg-active;
+				}
+			}
+		}
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}

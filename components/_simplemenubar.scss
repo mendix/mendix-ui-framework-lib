@@ -1,0 +1,120 @@
+/* ==========================================================================
+	Mendix Simple Menu Bar
+========================================================================== */
+.mx-menubar {
+	padding: 0;
+	background-color: $color-nav-bottombar-bg;
+	ul.mx-menubar-list {
+		width: 100%;
+		height: 50px;
+		table-layout: fixed;
+		li.mx-menubar-item {
+			margin: 0;
+			width: 100%;
+			display: inline-block;
+			a {
+				@include font(normal);
+				border-radius: 0;
+				color: $color-nav-bottombar-text;
+				font-size: $font-nav-bottombar-size;
+				padding: 0 8px;
+				text-align: center;
+				line-height: 50px;
+				overflow: hidden;
+				display: block;
+				vertical-align: middle;
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-nav-bottombar-glyph-size;
+					top: -1px;
+				}
+			}
+			a:hover,
+			a:focus,			
+			&:hover a,
+			&:focus a,
+			&.active a {
+				background-color: $color-nav-bottombar-bg-hover;
+				color: $color-nav-bottombar-text-hover;
+				text-decoration: none;
+			}
+			&.active a {
+            	color: $color-nav-bottombar-text-active;
+            	background-color: $color-nav-bottombar-bg-active;
+            }
+		}
+	}
+
+	/* Two menu items */
+	&.menubar-col-6 ul.mx-menubar-list li.mx-menubar-item {
+		width: 50%;
+	}
+	/* Three menu items */
+	&.menubar-col-4 ul.mx-menubar-list li.mx-menubar-item {
+		width: 33%;
+	}
+	/* Four menu items */
+	&.menubar-col-3 ul.mx-menubar-list li.mx-menubar-item {
+		width: 25%;
+	}
+	/* Five menu items */
+	&.menubar-col-2 ul.mx-menubar-list li.mx-menubar-item {
+		width: 20%;
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}
+
+/* text and icons centerd */
+.mx-menubar.bottom-nav-text-icons {
+	ul.mx-menubar-list {
+		li.mx-menubar-item {
+			a {
+				line-height: normal;
+		  		padding: 8px 8px 6px 8px;
+				.glyphicon {
+					display: block;
+		  			font-size: 18px;
+		  			margin-bottom: 4px;
+				}
+			}
+		}
+	}
+
+}
+
+/* Vertical variation specifics */
+.mx-menubar-vertical {
+	background-color: $color-nav-sidebar-bg;
+	ul.mx-menubar-list {
+		li.mx-menubar-item {
+			a {
+				color: $color-nav-sidebar-text;
+				font-size: $font-nav-sidebar-size;
+				border-bottom: 1px solid $color-nav-sidebar-border;
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-nav-sidebar-glyph-size;
+					top: -1px;
+				}
+
+				&:hover,
+				&:focus,
+				&.active {
+					background-color: $color-nav-sidebar-bg-hover;
+					color: $color-nav-sidebar-text-hover;
+					text-decoration: none;
+				}
+				&.active {
+	            	color: $color-nav-sidebar-text-active;
+	            	background-color: $color-nav-sidebar-bg-active;
+	            }
+			}
+		}
+	}
+}

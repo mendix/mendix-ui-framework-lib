@@ -35,16 +35,18 @@ $color-layout-bg:						#FFF !default;
 // Background color for specefic pages like the dashboard also used as utility class.
 $color-layout-bg-secondary:				#EFF4F7 !default;
 
-//== Layout settings
+
+//== Layout settings (navigtion widges will be styles aswell) if want adjust navtion to go 
+$color-topbar-bg:						#FFF !default; 
+$color-sidebar-bg:						$color-inverse !default;
+$color-bottombar-bg:					$color-inverse !default;
+
 // Topbar 
-$color-topbar-bg: 						#FFF !default;
 $minimalheight-topbar:					80px !default;
-// Sidebar 
-$color-sidebar-bg: 						$color-inverse !default;
+
 // Mobile header
 $m-height-header:						44px !default;
-// Background Color
-$m-color-header-bg: 					#FFF !default;
+$m-color-header-bg:						$color-topbar-bg !default;
 
 
 //== Basic text settings
@@ -88,6 +90,25 @@ $t-default-spacing-left:				30px !default;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//	ADVANCED VARIABLES
+//
+//########################################################################################
+
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
@@ -121,11 +142,6 @@ $font-size-h6:          				11px !default;
 // Line Height
 $line-height-base:      				1.428571429 !default;
 
-
-
-//== Color variations
-//
-//## 
 // Text Colors
 $color-text-black-secondary:            lighten($color-text-black, 40%) !default;
 $color-text-black-disabled:				rgba($color-text-black, .26) !default;
@@ -135,7 +151,83 @@ $color-text-white-secondary:            rgba($color-text-white, .7) !default;
 $color-text-white-disabled:             rgba($color-text-white,	.3) !default;
 $color-text-white-hint:                 rgba($color-text-white,	.3) !default;
 
-// Color Variations
+
+//== Topbar Region
+//
+//## Config this region that is used to define regions in desktop, tablet and mobile
+
+// Navigation styling (Menu Bar)
+$font-nav-topbar-size:					$font-size-base !default;
+$font-nav-topbar-sub-size:				$font-size-small !default;
+$font-nav-topbar-glyph-size:			1.2em !default;
+
+$color-nav-topbar-bg: 					$color-topbar-bg !default;
+$color-nav-topbar-bg-hover:				darken($color-nav-topbar-bg, 4) !default;
+$color-nav-topbar-bg-active:          	darken($color-nav-topbar-bg, 8) !default;
+$color-nav-topbar-text:					$color-text-black !default;
+$color-nav-topbar-text-hover:			$color-primary !default;
+$color-nav-topbar-text-active:			$color-primary !default;
+
+$color-nav-topbar-sub-bg: 				lighten($color-nav-topbar-bg, 4) !default;
+$color-nav-topbar-sub-bg-hover: 		$color-nav-topbar-sub-bg !default;
+$color-nav-topbar-sub-bg-active: 		$color-nav-topbar-sub-bg !default;
+$color-nav-topbar-sub-text:				$color-text-black-secondary !default;
+$color-nav-topbar-sub-text-hover:		$color-primary !default;
+$color-nav-topbar-sub-text-active:		$color-primary !default;
+
+$color-nav-topbar-border:				$color-nav-topbar-bg-hover !default;
+
+
+
+//== Sidebar Region
+//
+//## Config this region that is used to define regions in desktop, tablet and mobile
+
+// Navigation styling (Navigationtree, Navigation list, Simple menubar vertical)
+$font-nav-sidebar-size:					$font-size-base !default;
+$font-nav-sidebar-sub-size:				$font-size-small !default;
+$font-nav-sidebar-glyph-size:			1.2em !default;
+
+$color-nav-sidebar-bg: 					$color-sidebar-bg !default;
+$color-nav-sidebar-bg-hover:			lighten($color-nav-sidebar-bg, 4) !default;
+$color-nav-sidebar-bg-active:           lighten($color-nav-sidebar-bg, 8) !default;
+$color-nav-sidebar-text:				$color-text-white !default;
+$color-nav-sidebar-text-hover:			$color-primary !default;
+$color-nav-sidebar-text-active:			$color-primary !default;
+
+$color-nav-sidebar-sub-bg: 				darken($color-nav-sidebar-bg, 4) !default;
+$color-nav-sidebar-sub-bg-hover:		$color-nav-sidebar-sub-bg !default;
+$color-nav-sidebar-sub-bg-active:		$color-nav-sidebar-sub-bg !default;
+$color-nav-sidebar-sub-text:			#AAA !default;
+$color-nav-sidebar-sub-text-hover:		$color-primary !default;
+$color-nav-sidebar-sub-text-active:		$color-primary !default;
+
+$color-nav-sidebar-border:				$color-nav-sidebar-bg-hover !default;
+
+
+
+//== Bottombar Region
+//
+//## Config this region that is used to define regions in desktop, tablet and mobile
+
+// Navigation styling (Simple menubar horizontal)
+$font-nav-bottombar-size:				$font-size-base !default;
+$font-nav-bottombar-glyph-size:			1.2em !default;
+
+$color-nav-bottombar-bg: 				$color-bottombar-bg !default;
+$color-nav-bottombar-bg-hover:			lighten($color-nav-bottombar-bg, 4) !default;
+$color-nav-bottombar-bg-active:         lighten($color-nav-bottombar-bg, 8) !default;
+$color-nav-bottombar-text:				$color-text-white !default;
+$color-nav-bottombar-text-hover:		$color-primary !default;
+$color-nav-bottombar-text-active:		$color-primary !default;
+
+$color-nav-bottombar-border:			$color-nav-bottombar-bg-hover !default;
+
+
+
+//== Color variations
+//
+//## 
 $color-default-darker: 					shade($color-default,40) !default;	
 $color-default-dark: 					shade($color-default,26) !default;	
 $color-default-light: 					tint($color-default,40) !default;	
@@ -376,52 +468,32 @@ $color-label-border-danger: 			$color-danger !default;
 
 
 
-//== Navs
+//== Navigation widgets
 //
 //##
 
 // Navigation Text Sizes
-$font-navsidebar-size:					$font-size-base !default;
-$font-navtopbar-size:					$font-size-base !default;
-$font-navsidebar-sub-size:				$font-size-small !default;
-$font-navtopbar-sub-size:				$font-size-small !default;
+$font-nav-size:							$font-size-base !default;
+$font-nav-sub-size:						$font-size-small !default;
+$font-nav-glyph-size:					1.2em !default;
 
-$font-navsidebar-glyph-size:			1.2em !default;
-$font-navtopbar-glyph-size:				1.2em !default;
 
-// Navigation sidebar
-$color-navsidebar-bg: 					$color-sidebar-bg !default;
-$color-navsidebar-bg-hover:				lighten($color-navsidebar-bg, 4) !default;
-$color-navsidebar-bg-active:            lighten($color-navsidebar-bg, 8) !default;
-$color-navsidebar-text:					$color-text-white !default;
-$color-navsidebar-text-hover:			$color-primary !default;
-$color-navsidebar-text-active:			$color-primary !default;
+// Navigation default styling
+$color-nav-bg: 							$color-inverse !default;
+$color-nav-bg-hover:					darken($color-nav-topbar-bg, 4) !default;
+$color-nav-bg-active:          			darken($color-nav-topbar-bg, 8) !default;
+$color-nav-text:						$color-text-black !default;
+$color-nav-text-hover:					$color-primary !default;
+$color-nav-text-active:					$color-primary !default;
 
-$color-navsidebar-sub-bg: 				darken($color-navsidebar-bg, 4) !default;
-$color-navsidebar-sub-bg-hover:			$color-navsidebar-sub-bg !default;
-$color-navsidebar-sub-bg-active:		$color-navsidebar-sub-bg !default;
-$color-navsidebar-sub-text:				#AAA !default;
-$color-navsidebar-sub-text-hover:		$color-primary !default;
-$color-navsidebar-sub-text-active:		$color-primary !default;
+$color-nav-sub-bg: 						lighten($color-nav-bg, 4) !default;
+$color-nav-sub-bg-hover: 				$color-nav-sub-bg !default;
+$color-nav-sub-bg-active: 				$color-nav-sub-bg !default;
+$color-nav-sub-text:					$color-text-black-secondary !default;
+$color-nav-sub-text-hover:				$color-primary !default;
+$color-nav-sub-text-active:				$color-primary !default;
 
-$color-navsidebar-border:				$color-navsidebar-bg-hover !default;
-
-// Navigation topbar
-$color-navtopbar-bg: 					$color-topbar-bg !default;
-$color-navtopbar-bg-hover:				darken($color-navtopbar-bg, 4) !default;
-$color-navtopbar-bg-active:            	darken($color-navtopbar-bg, 8) !default;
-$color-navtopbar-text:					$color-text-black !default;
-$color-navtopbar-text-hover:			$color-primary !default;
-$color-navtopbar-text-active:			$color-primary !default;
-
-$color-navtopbar-sub-bg: 				lighten($color-navtopbar-bg, 4) !default;
-$color-navtopbar-sub-bg-hover: 			$color-navtopbar-sub-bg !default;
-$color-navtopbar-sub-bg-active: 		$color-navtopbar-sub-bg !default;
-$color-navtopbar-sub-text:				$color-text-black-secondary !default;
-$color-navtopbar-sub-text-hover:		$color-primary !default;
-$color-navtopbar-sub-text-active:		$color-primary !default;
-
-$color-navtopbar-border:				$color-navtopbar-bg-hover !default;
+$color-nav-border:						$color-nav-bg-hover !default;
 
 
 

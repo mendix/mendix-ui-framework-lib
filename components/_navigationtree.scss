@@ -1,0 +1,132 @@
+/* ==========================================================================
+	Mendix Navigation Tree
+========================================================================== */
+.mx-navigationtree {
+	background-color: $color-nav-sidebar-bg;
+
+	/* Every navigation item */
+	.navbar-inner ul {
+		margin: 0;
+		padding-left: 0;
+
+		li {
+			padding: 0;
+			border-style: none;
+
+			a {
+				@include font(normal);
+				display: block;
+				padding: 15px 20px 15px 16px;
+				border-bottom: 1px solid $color-nav-sidebar-border;
+				border-radius: 0;
+				color: $color-nav-sidebar-text;
+				text-shadow: none;
+				font-size: $font-nav-sidebar-size;
+				vertical-align: middle;
+				background-color: $color-nav-sidebar-bg;
+				border-left: 4px solid transparent;
+
+				.caret {
+					border-top-color: $color-nav-sidebar-text;
+					border-bottom-color: $color-nav-sidebar-text;
+				}
+
+				img {
+					margin-right: 4px;
+					width: 20px; // Default size (so it looks good)
+					height: auto;
+				}
+
+				.glyphicon {
+					vertical-align: middle;
+					font-size: $font-nav-sidebar-glyph-size;
+					top: -1px;
+				}
+			}
+
+			a:hover,
+			a:focus,
+			a.active {
+				background-color: $color-nav-sidebar-bg-hover;
+				color: $color-nav-sidebar-text-hover;
+				text-decoration: none;
+
+				.caret {
+					border-top-color: $color-nav-sidebar-text-active;
+					border-bottom-color: $color-nav-sidebar-text-active;
+				}
+			}
+
+            a.active {
+            	border-left-color: $color-nav-sidebar-text-active;
+            	color: $color-nav-sidebar-text-active;
+            	background-color: $color-nav-sidebar-bg-active;
+            }
+		}
+	}
+
+	/* Sub navigation item specific */
+	li.mx-navigationtree-has-items {
+		> ul {
+			margin: 0;
+			padding-left: 0;
+			background-color: $color-nav-sidebar-sub-bg;
+
+			li {
+				margin: 0;
+				padding: 0;
+				a {
+					@include font(normal);
+					color: $color-nav-sidebar-sub-text;
+					font-size: $font-nav-sidebar-sub-size;
+					background-color: $color-nav-sidebar-sub-bg;
+					padding: 12px 20px 12px 25px;
+					border: 0;
+
+					&:hover,
+					&:focus,
+					&.active {
+						color: $color-nav-sidebar-sub-text-hover;
+						background-color: $color-nav-sidebar-sub-bg-hover;
+					}
+					&.active {
+		            	border: 0;
+		            	color: $color-nav-sidebar-sub-text-active;
+		            	background-color: $color-nav-sidebar-sub-bg-active;
+		            }
+				}
+			}
+		}
+	}
+
+	/* remove focus */
+	&:focus {
+		outline: 0;
+	}
+}
+
+
+/* Content Centerd text and icons */
+.mx-navigationtree.nav-content-center-text-icons {
+	.navbar-inner ul {
+		a {
+			text-align: center;
+			.glyphicon {
+				display: block;
+  				margin-bottom: 5px;
+			}
+		}
+	}
+}
+
+/* Content Centerd icons only */
+.mx-navigationtree.nav-content-center {
+	.navbar-inner ul {
+		a {
+			text-align: center;
+			.glyphicon {
+
+			}
+		}
+	}
+}

@@ -6,7 +6,7 @@
 .region-topbar {
 	min-height: $minimalheight-topbar;
 	border-bottom: 1px solid $color-border-default;
-	background-color: $color-navtopbar-bg;
+	background-color: $color-topbar-bg;
 	> .mx-layoutcontainer-wrapper {
 		padding: 0;
 	}
@@ -51,7 +51,7 @@
 }
 .region-sidebar,
 .region-sidebar-fixed {
-	background-color: $color-navsidebar-bg;
+	background-color: $color-sidebar-bg;
 	> .mx-layoutcontainer-wrapper {
 		padding: 0;
 	}

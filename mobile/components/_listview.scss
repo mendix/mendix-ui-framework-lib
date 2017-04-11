@@ -37,6 +37,9 @@
 		}
 		.mx-list {
 			.mx-listview-item {
+				&:active {
+					background-color: $grid-bg-hover;
+				}
 				&:first-child {
 					border-radius: 0;
 				}

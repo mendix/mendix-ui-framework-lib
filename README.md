@@ -35,7 +35,7 @@ The mobile directory include specific styling for your tablet or phone pages and
 - [Live theme demo](https://ux.mendix.com/)
 - [Mendix UI Framework Website](https://ux.mendix.com/)
 - [Blog article about Mendix UI Framework](https://www.mendix.com/blog/the-eye-catching-mendix-ui-framework/)
-- [Create a custom theme with the Mendix UI Framework](https://world.mendix.com/display/howto50/Create+a+custom+theme+with+the+Mendix+UI+Framework)
+- [Create a custom theme with the Mendix UI Framework](https://docs.mendix.com/howto/ux/create-a-custom-theme-with-the-mendix-ui-framework)
 
 ### License
 
